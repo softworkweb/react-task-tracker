@@ -30,9 +30,9 @@ function Button(props) {
           }}
         >
           {close ? (
-            <IoMdCloseCircle color="#dc4c64" size={100} />
+            <IoMdCloseCircle color="#dc4c64" size={150} />
           ) : (
-            <IoMdAddCircle color="#14a44d" size={100} />
+            <IoMdAddCircle color="#14a44d" size={150} />
           )}
         </button>
         <div>{add}</div>
