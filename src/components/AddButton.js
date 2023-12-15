@@ -6,14 +6,13 @@ import NewTask from './NewTask';
 function Button(props) {
   const [add, setAdd] = useState('');
   const [close, setClose] = useState(false);
-  const addNew = <NewTask />;
   return (
     <>
       <div className="flex flex-col items-center">
         <button
           className="md:hidden"
           onClick={() => {
-            close !== false ? setAdd('') : setAdd(addNew);
+            close !== false ? setAdd('') : setAdd(<NewTask />);
             close ? setClose(false) : setClose(true);
           }}
         >
@@ -26,7 +25,7 @@ function Button(props) {
         <button
           className="hidden md:flex"
           onClick={() => {
-            close !== false ? setAdd('') : setAdd(addNew);
+            close !== false ? setAdd('') : setAdd(<NewTask />);
             close ? setClose(false) : setClose(true);
           }}
         >

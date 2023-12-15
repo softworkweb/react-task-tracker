@@ -13,6 +13,11 @@
 @tailwind components;
 @tailwind utilities;
 
-main {
-  color: #dc4c64;
+@keyframes myfade {
+  0% {
+    opacity: 0.01;
+  }
+}
+.animate-myfade {
+  animation: myfade 1s cubic-bezier(0.4, 0, 0.6, 1);
 }

@@ -1,11 +1,11 @@
 import React from 'react';
 import { useState } from 'react';
-
+import TaskAdded from './TaskAdded';
 function NewTask(props) {
-  const [addedTask, setAddedTask] = useState('hsjfffmfms');
+  const [addedTask, setAddedTask] = useState('');
 
   return (
-    <div className="space-y-[20px] px-10 py-5 border-[2px] border-[#08334497]">
+    <div className="space-y-[20px] px-10 py-5 border-[2px] border-[#08334497] relative">
       <div className="space-y-[5px]">
         <p>Task</p>
         <input
@@ -29,7 +29,10 @@ function NewTask(props) {
       <div className="bg-[#083344] text-cyan-50 text-center rounded-[4px]">
         <button
           onClick={() => {
-            setAddedTask('hello from here');
+            setAddedTask(<TaskAdded />);
+            setTimeout(() => {
+              setAddedTask('');
+            }, 2500);
           }}
         >
           Save Task
