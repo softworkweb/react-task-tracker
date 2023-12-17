@@ -24,7 +24,7 @@ function App() {
 
   return (
     <>
-      <div className="mx-auto flex justify-center  h-screen text-[18px] text-[#021117] relative">
+      <div className="mx-auto flex justify-center  h-screen text-[18px] text-[#0e181d] relative">
         <div className=" flex flex-col bg-[#ECFEFF] h-sceen item-center ">
           <div className="">
             <Header />
@@ -51,13 +51,29 @@ function App() {
               </>
             )}
           </div>
-          {taskItems.map((taskItem) => (
+          {/* {taskItems.map((taskItem) => (
             <div className=" flex justify-center my-[2vh]">
               <h1>{taskItem.task}</h1>
               <p>{taskItem.day_Time}</p>
-              <p>{taskItem.checked}</p>
+              {taskItem.checked ? <p>true</p> : <p>false</p>}
             </div>
-          ))}
+          ))} */}
+          <div className="flex items-center w-full my-[1px]">
+            <hr className="w-[5px] h-full bg-success"></hr>
+            <div className="w-full">
+              <hr className="bg-[#0b141820] h-[2px]"></hr>
+              <div className="flex items-center justify-between pr-3">
+                <div className="p-3">
+                  <h1 className="font-bold">Pick up trash</h1>
+                  <p className="text-[16px] text-[#0b141868]">Wednesday, 8am</p>
+                </div>
+                <div>
+                  <button>X</button>
+                </div>
+              </div>
+              <hr className="bg-[#0b141820] h-[2px]"></hr>
+            </div>
+          </div>
         </div>
       </div>
     </>
