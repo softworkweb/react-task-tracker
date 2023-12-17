@@ -1,11 +1,19 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import TaskAdded from './TaskAdded';
-function NewTask(props) {
+function NewTask({
+  task,
+  setTask,
+  dayTime,
+  setDayTime,
+  check,
+  setCheck,
+  updatedTask,
+  updatedDay_Time,
+  updatedCheck,
+  updatedTaskList,
+}) {
   const [addedTask, setAddedTask] = useState('');
-  const [task, setTask] = useState('');
-  const [dayTime, setDayTime] = useState('');
-  const [check, setCheck] = useState(false);
 
   return (
     <div className="space-y-[20px] px-10 py-5 border-[2px] border-[#08334497] relative">
@@ -19,7 +27,6 @@ function NewTask(props) {
             placeholder="Add Task"
             onChange={(e) => {
               setTask(e.target.value);
-              console.log('Task:', e.target.value);
             }}
           />
         </label>
@@ -34,7 +41,6 @@ function NewTask(props) {
             placeholder="Add Day & Time"
             onChange={(e) => {
               setDayTime(e.target.value);
-              console.log('Day & Time:', e.target.value);
             }}
           />
         </label>
@@ -47,7 +53,6 @@ function NewTask(props) {
             value={check}
             onChange={(e) => {
               setCheck(e.target.checked);
-              console.log('check', e.target.checked);
             }}
             className="w-4 h-4 checked:bg-black bg-gray-900 border-[#083344] rounded focus:ring-[#083344] focus:ring-2"
           />
@@ -58,10 +63,11 @@ function NewTask(props) {
         onClick={() => {
           setTask('');
           setDayTime('');
-          setCheck();
+          setCheck(false);
           setAddedTask(<TaskAdded />);
-
+          
           setTimeout(() => {
+            updatedTaskList(task, dayTime, check);
             setAddedTask('');
           }, 2500);
         }}

@@ -1,29 +1,30 @@
 import React from 'react';
-import { IoMdAddCircle } from 'react-icons/io';
 
-function AddButton({ addBtn, setAddBtn }) {
+import { IoMdCloseCircle } from 'react-icons/io';
+
+function CancelButton({ addBtn, setAddBtn }) {
   return (
     <>
       <div className="flex flex-col items-center">
         <button
           className="md:hidden"
           onClick={() => {
-            setAddBtn(false);
+            setAddBtn(true);
           }}
         >
-          <IoMdAddCircle color="#14a44d" size={100} />
+          <IoMdCloseCircle color="#dc4c64" size={100} />
         </button>
         <button
           className="hidden md:flex"
           onClick={() => {
-            setAddBtn(false);
+            setAddBtn(true);
           }}
         >
-          <IoMdAddCircle color="#14a44d" size={150} />
+          <IoMdCloseCircle color="#dc4c64" size={150} />
         </button>
       </div>
     </>
   );
 }
 
-export default AddButton;
+export default CancelButton;
