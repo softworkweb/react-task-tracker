@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import AddButton from './components/AddButton';
 import CancelButton from './components/CancelButton';
+import RemoveBtn from './components/Buttons/RemoveBtn';
 import TasksList from './components/TasksList';
 import NewTask from './components/NewTask';
 function App() {
@@ -24,7 +25,7 @@ function App() {
 
   return (
     <>
-      <div className="mx-auto flex justify-center  h-screen text-[18px] text-[#0e181d] relative">
+      <div className="mx-auto flex justify-center  h-screen text-[18px] text-[#0e181d] relative md:text-[22px]">
         <div className=" flex flex-col bg-[#ECFEFF] h-sceen item-center ">
           <div className="">
             <Header />
@@ -58,20 +59,24 @@ function App() {
               {taskItem.checked ? <p>true</p> : <p>false</p>}
             </div>
           ))} */}
-          <div className="flex items-center w-full my-[1px]">
-            <hr className="w-[5px] h-full bg-success"></hr>
-            <div className="w-full">
-              <hr className="bg-[#0b141820] h-[2px]"></hr>
-              <div className="flex items-center justify-between pr-3">
-                <div className="p-3">
-                  <h1 className="font-bold">Pick up trash</h1>
-                  <p className="text-[16px] text-[#0b141868]">Wednesday, 8am</p>
+          <div className="my-[50px] flex flex-col md:my-[150px]">
+            <div className="flex items-center w-full my-[1px] md:my-[5px]">
+              <hr className="w-[5px] h-full bg-success"></hr>
+              <div className="w-full">
+                <hr className="bg-[#0b141820] h-[2px]"></hr>
+                <div className="flex items-center justify-between pr-3 md:pr-10">
+                  <div className="p-3 md:p-5">
+                    <h1 className="font-bold">Pick up trash</h1>
+                    <p className="text-[16px] text-[#0b141868] md:text-[18px]">
+                      Wednesday, 8am
+                    </p>
+                  </div>
+                  <div>
+                    <RemoveBtn />
+                  </div>
                 </div>
-                <div>
-                  <button>X</button>
-                </div>
+                <hr className="bg-[#0b141820] text-danger h-[2px]"></hr>
               </div>
-              <hr className="bg-[#0b141820] h-[2px]"></hr>
             </div>
           </div>
         </div>
