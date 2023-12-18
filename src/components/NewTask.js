@@ -8,9 +8,7 @@ function NewTask({
   setDayTime,
   check,
   setCheck,
-  updatedTask,
-  updatedDay_Time,
-  updatedCheck,
+
   updatedTaskList,
 }) {
   const [addedTask, setAddedTask] = useState('');
@@ -50,7 +48,7 @@ function NewTask({
         <label htmlFor="reminder-checkbox">
           <input
             type="checkbox"
-            value={check}
+            checked={check}
             onChange={(e) => {
               setCheck(e.target.checked);
             }}
@@ -63,9 +61,9 @@ function NewTask({
         onClick={() => {
           setTask('');
           setDayTime('');
-          setCheck(false);
+          setCheck();
           setAddedTask(<TaskAdded />);
-          
+
           setTimeout(() => {
             updatedTaskList(task, dayTime, check);
             setAddedTask('');

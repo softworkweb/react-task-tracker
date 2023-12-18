@@ -21,7 +21,7 @@ function App() {
     });
   };
   const taskItems = [...newTasks];
-  console.log(taskItems.length);
+
   return (
     <>
       <div className="mx-auto flex justify-center  h-screen text-[18px] text-[#0e181d] relative md:text-[22px]">
@@ -52,7 +52,7 @@ function App() {
                 </>
               )}
             </div>
-            <div className="my-[50px] bg-[#ECFEFF] flex flex-col md:my-[150px]">
+            <div className="my-[50px] bg-[#ECFEFF] h-full flex flex-col md:my-[150px]">
               {taskItems.length > 0 ? (
                 taskItems.map((taskItem) => (
                   <TasksList

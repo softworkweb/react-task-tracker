@@ -6,9 +6,9 @@ function TasksList({ task, day_Time, checked }) {
     <>
       <div className="flex items-center w-full my-[1px] md:my-[5px]">
         {checked ? (
-          <hr className="w-[5px] h-full bg-success"></hr>
+          <hr className="w-[8px] h-full bg-success"></hr>
         ) : (
-          <hr className="w-[5px] h-full bg-success/1"></hr>
+          <hr className="w-[8px] h-full bg-success/1"></hr>
         )}
 
         <div className="w-full">
@@ -24,7 +24,7 @@ function TasksList({ task, day_Time, checked }) {
               <RemoveBtn />
             </div>
           </div>
-          <hr className="bg-[#0b141820] text-danger h-[2px]"></hr>
+          <hr className="bg-[#0b141820] h-[2px]"></hr>
         </div>
       </div>
     </>
