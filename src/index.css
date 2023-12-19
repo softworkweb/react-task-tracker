@@ -1,3 +1,17 @@
+/* 
+  Tailwind CSS styling:
+
+  @layer base: Applies base styles to the HTML element, setting text color.
+    - In light mode, text color is neutral-800.
+    - In dark mode, text color is neutral-50, and background color is neutral-800.
+
+  @layer components and @layer utilities: Imports Tailwind CSS components and utilities.
+
+  @keyframes myfade: Defines a CSS animation named 'myfade' using keyframes.
+    - Fades in the element from 0% opacity to 100% opacity over 1 second.
+  
+  .animate-myfade: Applies the 'myfade' animation to elements with the 'animate-myfade' class.
+*/
 @tailwind base;
 
 @layer base {
@@ -21,4 +35,3 @@
 .animate-myfade {
   animation: myfade 1s cubic-bezier(0.4, 0, 0.6, 1);
 }
-
