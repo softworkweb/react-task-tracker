@@ -29,7 +29,7 @@ function CancelButton({ addBtn, setAddBtn }) {
           }}
         >
           {/* Display the IoMdCloseCircle icon with specified color and size */}
-          <IoMdCloseCircle color="#dc4c64" size={150} />
+          <IoMdCloseCircle color="#dc4c64" size={130} />
         </button>
       </div>
     </>

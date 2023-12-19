@@ -8,23 +8,22 @@ function TasksList({ id, task, day_Time, checked, removeItem }) {
     // Fragment to group multiple elements without adding an extra node to the DOM
     <>
       {/* Container for the task item, flex layout with vertical alignment */}
-      <div className="flex items-center h-full w-full my-[1px] md:my-[5px]">
+      <div className="flex items-center px-[2px] w-full my-[1px] md:my-[5px]">
         {/* Conditional rendering of horizontal line based on task completion */}
+
         {checked ? (
-          <hr className="w-[8px] bg-success"></hr>
-        ) : (
-          <hr className="w-[8px] h-full bg-success/1"></hr>
-        )}
+          <hr className="w-[8px] h-[78px] bg-success md:h-[87px]"></hr>
+        ) : null}
 
         {/* Container for the task details and remove button */}
-        <div className="w-full h-full">
+        <div className="w-full">
           {/* Horizontal line above the task details */}
-          <hr className="bg-[#0b141820] h-[2px]"></hr>
+          <hr className="bg-[#0b141820] h-[2px] w-full"></hr>
 
           {/* Flex container for the task details and remove button */}
-          <div className="flex items-center h-full justify-between pr-3 md:pr-10">
+          <div className="flex items-center h-full justify-between pr-7 md:pr-15">
             {/* Container for the task details with padding */}
-            <div className="h-full p-3 md:p-5">
+            <div className=" p-3 md:p-5">
               {/* Task title with bold font */}
               <h1 className="font-bold">{task}</h1>
               {/* Task details with a smaller font size */}
@@ -41,7 +40,7 @@ function TasksList({ id, task, day_Time, checked, removeItem }) {
           </div>
 
           {/* Horizontal line below the task details */}
-          <hr className="bg-[#0b141820] h-[2px]"></hr>
+          <hr className="bg-[#0b141820] h-[2px] w-full"></hr>
         </div>
       </div>
     </>

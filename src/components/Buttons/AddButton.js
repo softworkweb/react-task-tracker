@@ -29,7 +29,7 @@ function AddButton({ addBtn, setAddBtn }) {
           }}
         >
           {/* Display the IoMdAddCircle icon with specified color and size */}
-          <IoMdAddCircle color="#14a44d" size={150} />
+          <IoMdAddCircle color="#14a44d" size={130} />
         </button>
       </div>
     </>

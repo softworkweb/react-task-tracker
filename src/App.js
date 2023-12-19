@@ -42,7 +42,7 @@ function App() {
   // JSX rendering
   return (
     <>
-      <div className="mx-auto flex justify-center h-screen text-[18px] text-[#0e181d] relative md:text-[22px]">
+      <div className="mx-auto flex justify-center min-h-screen w-screen text-[18px] text-[#0e181d] bg-[#ECFEFF] relative md:text-[22px]">
         <div className="flex flex-col item-center">
           {/* Header component */}
           <div>
@@ -50,7 +50,7 @@ function App() {
           </div>
 
           {/* Main content of the application */}
-          <div className="bg-[#ECFEFF] h-screen">
+          <div className="border border-[#0b141820] pb-[50px] ">
             <div className="flex justify-center my-[2vh]">
               {/* Conditionally render either AddButton or CancelButton and NewTask components */}
               {addBtn ? (
@@ -79,12 +79,12 @@ function App() {
 
             {/* Display the list of tasks */}
             <div className="w-">
-              <div className="my-[50px] bg-[#ECFEFF] h-full flex flex-col md:my-[150px]">
+              <div className="my-[50px] h-full flex flex-col md:my-[150px]">
                 {/* Check if there are tasks to display */}
                 {taskItems.length > 0 ? (
                   // Map through the tasks and render TasksList component for each task
                   taskItems.map((taskItem) => (
-                    <div className="space-y-[20px] h-full" key={taskItem.id}>
+                    <div className="space-y-[20px] " key={taskItem.id}>
                       <TasksList
                         id={taskItem.id}
                         key={taskItem.id}
@@ -113,9 +113,7 @@ function App() {
               {/* Render ClearAllBtn component if there are tasks */}
               {taskItems.length > 0 ? (
                 <ClearAllBtn clearAllItem={clearAllItem} />
-              ) : (
-                ''
-              )}
+              ) : null}
             </div>
           </div>
         </div>

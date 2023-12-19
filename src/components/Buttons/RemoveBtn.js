@@ -14,7 +14,7 @@ function RemoveBtn({ id, removeItem }) {
       </button>
 
       {/* Button for larger screens (hidden on small screens - md:flex) */}
-      <button className="hidden md:flex" onClick={() => {}}>
+      <button className="hidden md:flex" onClick={() => removeItem(id)}>
         {/* Display the RiDeleteBin6Line icon with specified color and size */}
         <RiDeleteBin6Line color="#dc4c64" size={50} />
       </button>

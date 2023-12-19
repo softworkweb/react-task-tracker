@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import TaskAdded from './TaskAdded';
 
 // Functional component for the NewTask form
