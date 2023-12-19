@@ -1,5 +1,5 @@
-// Importing React and necessary hooks
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { useState, useEffect } from 'react';
 import TaskAdded from './TaskAdded';
 
 // Functional component for the NewTask form
